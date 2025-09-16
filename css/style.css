@@ -1,0 +1,265 @@
+body {
+  background-color: antiquewhite;
+  font-family: 'Zen Kurenaido', sans-serif;   
+  color: #111;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.particles {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.particles span {
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: rgba(68, 20, 179, 0.4);
+  animation: floatAll 20s ease-in-out infinite;
+}
+
+/* 丸い粒子 */
+.particles .circle {
+  border-radius: 50%;
+}
+
+/* 四角い粒子（デフォルト） */
+.particles .square {
+  border-radius: 0;
+}
+
+@keyframes floatAll {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  25% {
+    transform: translate(50vw, -30vh); /* 右上へ */
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-40vw, 40vh); /* 左下へ */
+  }
+  75% {
+    transform: translate(30vw, 60vh); /* 右下へ */
+  }
+  100% {
+    transform: translate(-60vw, -50vh); /* 左上へ */
+    opacity: 0;
+  }
+}
+
+.particles span:nth-child(1) {
+  top: 10%;
+  left: 20%;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+.particles span:nth-child(2) {
+  top: 50%;
+  left: 40%;
+  animation-delay: 3s;
+  animation-duration: 22s;
+}
+.particles span:nth-child(3) {
+  top: 80%;
+  left: 70%;
+  animation-delay: 6s;
+  animation-duration: 25s;
+}
+.particles span:nth-child(4) {
+  top: 30%;
+  left: 80%;
+  animation-delay: 9s;
+  animation-duration: 20s;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 20px 0;
+  color: #a5e4cb;
+  text-shadow: #999 2px 2px 4px;
+}
+
+.periodic-wrapper {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  width: 100%;
+  scroll-padding-left: 20px;
+}
+
+#periodic-table {
+  width: max-content;
+  min-width: max-content;
+  display: grid;
+  grid-template-columns: repeat(18, 50px);
+  grid-auto-rows: 50px;
+  gap: 4px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.element {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+}
+
+.element sup {
+  font-size: 0.6em;
+  margin-right: 30px;
+}
+
+.element strong {
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: -10px;
+}
+
+.element:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+#element-detail {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow:inset 0 0 10px rgba(0,0,0,0.3);
+}
+
+.hidden {
+  display: none;
+}
+
+#close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.element.gas {
+  background-color: #a3beda;
+}
+.element.liquid {
+  background-color: #e0c187;
+}
+.element.solid {
+  background-color: #adc9ad;
+}
+
+.element.lanthanoid {
+  box-shadow: inset 4px 4px 8px #cbae3c;
+}
+
+.element.actinoid {
+  box-shadow: inset 4px 4px 8px #d37222;
+}
+
+.element.halogen {
+  box-shadow: 0 0 10px #50d268;
+}
+
+.element.metal {
+  box-shadow: 0 0 10px #1a991a;
+}
+
+.element.nonmetal {
+  box-shadow: 0 0 10px #d21e0d;
+}
+
+.element.noble-gas {
+  box-shadow: 0 0 10px #6262e3;
+}
+
+.element.transition-metal {
+  box-shadow: 0 0 10px #1f1f1f;
+}
+
+.element.post-transition-metal {
+  box-shadow: 0 0 10px #434143;
+}
+
+.element.alkali-metal {
+  box-shadow: 0 0 10px #1a9999;
+}
+
+.element.alkaline-earth-metal {
+  box-shadow: 0 0 10px #ceea1e;
+}
+
+.element.other-metal {
+  box-shadow: 0 0 10px #3a3939;
+}
+
+.element.rare-earth {
+  box-shadow: 0 0 10px #2f2f43;
+}
+
+.element.metalloid {
+  box-shadow: 0 0 10px #99991a;
+}
+
+.note {
+  font-size: 0.6em;
+  font-weight: bold;
+  margin-top: -10px;
+  color: #666;
+}
+
+.toxicity-label {
+  font-size: 0.8em;
+  margin-top: 4px;
+  display: block;
+  color: #333;
+}
+
+.element .toxicity-label::before {
+  content: "Toxicity: ";
+  font-weight: bold;
+}
+
+@media (max-width: 769px) {
+  #periodic-table {
+    grid-template-columns: repeat(18, 40px);
+    grid-auto-rows: 40px;
+    position: relative;
+    z-index: 0;
+    margin: 20px 0;
+  }
+  .periodic-wrapper {
+    display: block;
+    padding-left: 10px;
+    padding-left: 10px;
+  }
+  .element {
+    font-size: 0.9em;
+  }
+  #element-detail {
+    position: fixed;
+    z-index: 1000;
+  }
+
+}

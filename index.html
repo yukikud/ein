@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <meta name="description" content="The periodic table of elements with details on each element. Click on an element to see more information." />
+  <meta name="keywords" content="periodic table, elements, chemistry, science" />
+  <title>The periodic table</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+   <h1>The periodic table</h1>
+   <p class="subtitle">Drawn with kindness, colored with science. </p>
+ </header>
+  <div class="periodic-wrapper">
+  <div id="periodic-table"></div>
+</div>
+  <div id="element-detail" class="hidden">
+    <span id="close-btn">×</span>
+    <h2 id="detail-symbol"></h2>
+    <p><strong>name:</strong> <span id="detail-name"></span></p>
+    <p><strong>weight:</strong> <span id="detail-weight"></span></p>
+    <p><strong>state:</strong> <span id="detail-state"></span></p>
+    <p><strong>group:</strong> <span id="detail-group"></span></p>
+    <p class="note">
+    ※このgroupはわかりやすくした表現です。<br>実際の分類は教科書などで確認してね📘
+    </p>
+    <p><strong>toxicity:</strong> <span id="detail-toxicity"></span></p>
+    <p><a id="detail-wiki" href="#" target="_blank" rel = "noreferrer">Wikipediaで詳しく見る</a></p>
+  </div>
+    <div class="particles">
+    <span class="circle"></span>
+    <span class="square"></span>
+    <span class="circle"></span>
+    <span class="square"></span>
+    <!-- ●■ -->
+　</div>
+   <footer>
+    <p>© 2025 Yuki Kudo. All Rights Reserved.</p>
+   </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
