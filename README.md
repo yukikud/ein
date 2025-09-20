@@ -32,13 +32,14 @@
 ## 🐾 作者について
 
 **Yuki（[@yukikud](https://github.com/yukikud)）**  
-Web制作を学習中。  
-HTML / CSS / JavaScript / PHP / WordPress / GitHub / VS Code などを使用。
+Web制作を学習中です。以下のツールや言語を使って制作しています：
+
+- デザイン：Canva / Figma  
+- 開発言語：HTML / CSS / JavaScript / PHP  
+- 環境：VS Code / WordPress / Studio / GitHub
 
 ## 🛡️ 著作権と利用について
 
-このリポジトリのコード・構成・データは、Yukiによる創作・学習成果です。  
+このリポジトリは、Yuki（@yukikud）による学習成果です。  
 無断転載・商用利用・作者名の削除は禁止です。  
 学習目的での参考・フォークは歓迎しますが、必ずクレジットを明記してください。
-
----
