@@ -1,5 +1,7 @@
 # The Periodic Table
 
+[![ロゴ画像](images/favicon.ico)](https://yukikud.github.io/ein/)
+
 このリポジトリは、YukiがJavaScript実習の一環として制作した、インタラクティブな周期表サイトです。  
 元素記号をクリックすると、詳細情報が表示され、Wikipediaへのリンクからさらに深く学ぶことができます。  
 
